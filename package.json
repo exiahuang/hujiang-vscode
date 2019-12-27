@@ -1,0 +1,84 @@
+{
+    "name": "hujiang",
+    "displayName": "hujiang",
+    "description": "沪江词典 for vscode",
+    "version": "0.0.1",
+    "publisher": "ExiaHuang",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "icon": "images/icon.png",
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "沪江日语",
+        "沪江英语",
+        "词典",
+        "日语词典",
+        "日本語",
+        "英語",
+        "dictionary"
+    ],
+    "bugs": {
+        "url": "https://github.com/exiahuang/hujiang-vscode/issues"
+    },
+    "homepage": "https://github.com/exiahuang/hujiang-vscode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/exiahuang/hujiang-vscode.git"
+    },
+    "activationEvents": [
+        "onCommand:hujiang.en2cn",
+        "onCommand:hujiang.jp2cn"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "hujiang.en2cn",
+                "title": "hujiang沪江英语：英文⇒中文"
+            },
+            {
+                "command": "hujiang.jp2cn",
+                "title": "hujiang沪江日语：日本語⇒中文"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "hujiang.en2cn",
+                    "when": "editorHasSelection",
+                    "group": "myGroup@1"
+                },
+                {
+                    "command": "hujiang.jp2cn",
+                    "when": "editorHasSelection",
+                    "group": "myGroup@1"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.41.0",
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "typescript": "^3.6.4",
+        "tslint": "^5.20.0",
+        "vscode-test": "^1.2.2"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.3",
+        "request": "^2.88.0"
+    }
+}
