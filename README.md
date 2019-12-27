@@ -27,8 +27,5 @@ None
 - 沪江词典
 - [hujiang_dictionary](https://github.com/Asutorufa/hujiang_dictionary)
 
-## TODO
-
-- 「いいお年を」查询的时候，不出结果，却没有任何提示。
 
 **Enjoy!**
