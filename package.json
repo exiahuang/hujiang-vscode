@@ -2,7 +2,7 @@
     "name": "hujiang",
     "displayName": "hujiang",
     "description": "沪江词典 for vscode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "ExiaHuang",
     "engines": {
         "vscode": "^1.41.0"
